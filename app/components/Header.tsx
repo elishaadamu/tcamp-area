@@ -9,6 +9,7 @@ export default function Header() {
   const [activeSection, setActiveSection] = useState("methodology");
 
   const navLinks = [
+    { id: "hero", label: "Background" },
     { id: "methodology", label: "Methodology" },
     { id: "demographics", label: "Demographics" },
     { id: "index", label: "Index" },
@@ -85,7 +86,7 @@ export default function Header() {
           
           <div className="flex items-center gap-4">
              <h1 className="text-white font-heading font-bold text-xl md:text-3xl tracking-tight opacity-90">
-               TCAMPO Area
+               TCAMPO  Environmental Justice Analysis
              </h1>
           </div>
 

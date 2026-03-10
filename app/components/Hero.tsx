@@ -6,7 +6,7 @@ import { ArrowDown } from 'lucide-react';
 export default function Hero() {
 
   return (
-    <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <div id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 bg-arcgis-teal">
         <Image
@@ -21,16 +21,10 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center pt-24 px-6 text-white max-w-4xl">
+      <div className="relative z-10 text-center pt-10 px-6 text-white max-w-4xl">
          <h1 className="text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 text-shadow text-white drop-shadow-xl">
-            Michiana Regional Overview
+            TCAMPO Environmental Justice Analysis
          </h1>
-         <p className="text-xl md:text-3xl font-body italic opacity-95 text-shadow drop-shadow-lg max-w-2xl mx-auto">
-            A scrollytelling journey through our changing landscape, infrastructure, and communities.
-         </p>
-         <div className="mt-16 text-sm uppercase tracking-[0.2em] font-heading font-semibold opacity-90 mb-12">
-            Published &bull; March 2026
-         </div>
       </div>
 
       {/* Down Arrow */}
