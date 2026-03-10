@@ -44,7 +44,7 @@ export default function ImageLightbox({ src, alt, width = 1400, height = 800, co
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[9999] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-pointer"
+            className="fixed inset-0 z-[9999999] bg-black/95 flex items-center justify-center p-4 md:p-8 cursor-pointer"
             onClick={() => setIsOpen(false)}
           >
             <motion.button 

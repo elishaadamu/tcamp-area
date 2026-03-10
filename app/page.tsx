@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Sidecar, { SidecarPanel } from "./components/Sidecar";
 import { ArrowDown } from "lucide-react";
-import ImageLightbox from "./components/ImageLightbox";
 import MapWidget from "./components/MapWidget";
 
 export default function Home() {
@@ -73,8 +72,8 @@ export default function Home() {
       <Hero />
       
       {/* Process Section */}
-      <section id="methodology" className="max-w-[1600px] mx-auto py-32 px-6 md:px-12 relative z-10">
-          <div className="max-w-4xl mx-auto">
+      <section id="methodology" className="max-w-7xl mx-auto py-32 px-6 md:px-12 relative z-10">
+          <div className="max-w-7xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-heading font-black mb-12 text-white leading-tight">
                Purpose of the Indicators of <span className="text-accent-yellow">Potential Disadvantage (IPD)</span>
             </h1>
@@ -90,18 +89,18 @@ export default function Home() {
                </p>
                
                <div className="flex flex-col lg:flex-row gap-16 items-center mt-20">
-                 <div className="w-full lg:w-1/2 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-gray-800 bg-gray-900/50 p-4 transition-transform hover:scale-[1.02] duration-500">
-                   <ImageLightbox 
-                     src="/images/Screenshot 2026-03-09 162347.png" 
-                     alt="Breakdown of IPD Classification" 
-                     width={900} 
-                     height={600} 
-                     containerClassName="w-full h-full rounded-2xl overflow-hidden"
-                     imageClassName="w-full h-full object-cover"
-                   />
+                 <div className="w-full lg:w-1/2 transition-transform hover:scale-[1.02] duration-500">
+                    <div className="w-full h-[600px] relative">
+                      <Image 
+                        src="/images/Screenshot 2026-03-09 162347.png" 
+                        alt="Breakdown of IPD Classification" 
+                        fill
+                        className="object-contain rounded-2xl"
+                      />
+                    </div>
                  </div>
                  <div className="w-full lg:w-1/2 flex items-center">
-                   <p className="font-body text-sm leading-loose text-gray-300">
+                   <p className="font-body text-xl leading-loose text-gray-300">
                     Using this data, population groups are identified and located at the block group level. Data is gathered at the regional level, combining populations from each of the four counties, for either individuals or households, depending on the indicator. From there, the total number of persons in each demographic group is divided by the appropriate universe (either population or households) for the four-county region, providing a regional average for that population group. Each block group is given a calculation determined by the standard deviations relative to each indicator’s regional average. This calculation is used to determine the concentration of IPD population from “well below average” to “well above average.” The IPD is identified when sensitive populations are above average in each block group.
                    </p>
                  </div>
@@ -129,7 +128,7 @@ export default function Home() {
 
       {/* Overall Regional IPD Section */}
       <section id="index" className="w-full bg-arcgis-dark pt-32 pb-0">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12 mb-16">
+        <div className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
             <h2 className="text-4xl md:text-6xl font-heading font-black mb-8 text-white tracking-tight">
               Interactive Overall <span className="text-accent-yellow">IPD Analysis</span>
             </h2>

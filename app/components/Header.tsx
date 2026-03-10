@@ -69,7 +69,7 @@ export default function Header() {
             : "bg-arcgis-dark py-4"
         }`}
       >
-        <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-[1240px] mx-auto px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
              <Image 
                src="/Logo.png" 
