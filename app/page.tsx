@@ -111,8 +111,8 @@ export default function Home() {
 
       {/* Regional Demographics Section */}
       <section id="demographics" className="w-full bg-nav-bg border-y border-gray-800">
-        <div className="py-32 px-6 max-w-[1400px] mx-auto md:px-12">
-            <div className="max-w-4xl mx-auto">
+        <div className="py-32  max-w-7xl mx-auto md:px-12">
+            <div className="max-w-7xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-heading font-black mb-10 text-white">Regional Demographics</h2>
               <p className="text-2xl leading-relaxed font-body text-gray-400 mb-8 border-b border-gray-800 pb-12">
                 EJ is concerned with the impacts of disparate funding and disparate services on defined minority and low-income groups.
