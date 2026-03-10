@@ -1,0 +1,11 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature", "properties": { "name": "SB Minority 1", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.25, 41.67] } },
+    { "type": "Feature", "properties": { "name": "SB Minority 2", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.26, 41.68] } },
+    { "type": "Feature", "properties": { "name": "SB Minority 3", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.24, 41.69] } },
+    { "type": "Feature", "properties": { "name": "West Side Outreach", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.285, 41.675] } },
+    { "type": "Feature", "properties": { "name": "Lakeside Community Center", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.22, 41.71] } },
+    { "type": "Feature", "properties": { "name": "Harrison Neighborhood Hub", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.27, 41.65] } }
+  ]
+}

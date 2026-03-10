@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Hispanic Concentration 1", "level": "high" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-86.22, 41.65], [-86.18, 41.65], [-86.18, 41.68], [-86.22, 41.68], [-86.22, 41.65]
+        ]]
+      }
+    },
+    { "type": "Feature", "properties": { "name": "La Casa de Amistad", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.255, 41.66] } },
+    { "type": "Feature", "properties": { "name": "Mercado Hispano", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.21, 41.665] } },
+    { "type": "Feature", "properties": { "name": "El Campito Early Learning Center", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.225, 41.655] } },
+    { "type": "Feature", "properties": { "name": "Western Avenue Cultural Hub", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.275, 41.666] } }
+  ]
+}

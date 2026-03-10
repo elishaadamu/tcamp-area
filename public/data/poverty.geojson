@@ -1,0 +1,30 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { 
+      "type": "Feature", 
+      "properties": { "name": "Main Corridor", "level": "high" }, 
+      "geometry": { 
+        "type": "LineString", 
+        "coordinates": [
+          [-86.25, 41.67], [-86.20, 41.67], [-86.15, 41.67]
+        ] 
+      } 
+    },
+    { 
+      "type": "Feature", 
+      "properties": { "name": "North Transit Line", "level": "medium" }, 
+      "geometry": { 
+        "type": "LineString", 
+        "coordinates": [
+          [-86.24, 41.65], [-86.24, 41.72]
+        ] 
+      } 
+    },
+    { "type": "Feature", "properties": { "name": "Food Bank of Northern Indiana", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.235, 41.685] } },
+    { "type": "Feature", "properties": { "name": "Center for the Homeless", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.26, 41.67] } },
+    { "type": "Feature", "properties": { "name": "Monroe Park Community Hub", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.245, 41.662] } },
+    { "type": "Feature", "properties": { "name": "West Side Food Pantry", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.28, 41.668] } },
+    { "type": "Feature", "properties": { "name": "South Bend Rescue Mission", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.252, 41.658] } }
+  ]
+}

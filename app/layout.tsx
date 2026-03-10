@@ -13,7 +13,7 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "TCAMPO Area.",
+  title: "TCAMPO Area",
   description: "A data-driven narrative experience",
 };
 

@@ -6,19 +6,18 @@ import { Menu, Share2, Info } from "lucide-react";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [pastHero, setPastHero] = useState(false);
-  const [activeSection, setActiveSection] = useState("process");
+  const [activeSection, setActiveSection] = useState("methodology");
 
   const navLinks = [
-    { id: "process", label: "Process" },
-    { id: "regional-demographics", label: "Regional Demographics" },
-    { id: "Overall Regional IPD", label: "Overall Regional IPD" },
-    { id: "conclusion", label: "Conclusion" },
+    { id: "methodology", label: "Methodology" },
+    { id: "demographics", label: "Demographics" },
+    { id: "index", label: "Index" },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      setPastHero(window.scrollY > window.innerHeight - 100);
+      setPastHero(window.scrollY > 300); // Trigger secondary nav earlier
 
       // Determine active section based on scroll position
       const sections = navLinks.map(link => document.getElementById(link.id));
@@ -28,7 +27,7 @@ export default function Header() {
         if (section) {
           const rect = section.getBoundingClientRect();
           // Adjust threshold so active class updates correctly as we scroll
-          if (rect.top <= 200 && rect.bottom >= 100) {
+          if (rect.top <= 250 && rect.bottom >= 150) {
             current = section.id;
           }
         }
@@ -42,11 +41,11 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string, e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToSection = (id: string, e: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => {
     e.preventDefault();
     const el = document.getElementById(id);
     if (el) {
-      const offset = 120; // Height of both headers approx
+      const offset = 140; // Height of both headers
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = el.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -60,60 +59,63 @@ export default function Header() {
   };
 
   return (
-    <header 
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 border-b ${
-        scrolled 
-          ? "bg-white/95 backdrop-blur-sm border-gray-200 shadow-sm text-gray-900" 
-          : "bg-white border-transparent text-gray-900"
-      }`}
-    >
-      <div className={`max-w-7xl mx-auto px-6 flex justify-between items-center transition-all duration-300 ${scrolled ? 'h-16' : 'h-24'}`}>
-        <div className="flex items-center gap-4">
-           <Image src="/images/Logo.png" alt="Michiana StoryMap Logo" width={600} height={200} className={`w-auto transition-all duration-300 ${scrolled ? 'h-10' : 'h-14'}`} />
-           <div className="h-8 border-l-2 border-gray-300 hidden md:block"></div>
-           <span className="font-heading font-bold text-xl tracking-tight text-[#0f343a] hidden md:block">
-             TCAMPO Area
-           </span>
-        </div>
-        
-        <div className="flex flex-row items-center gap-6">
-           <button 
-             onClick={() => window.print()}
-             className="hidden sm:flex items-center gap-2 hover:opacity-75 transition-opacity font-heading text-sm font-medium"
-           >
-             <Share2 size={16} />
-             Share
-           </button>
-           <button className="hidden sm:flex items-center gap-2 hover:opacity-75 transition-opacity font-heading text-sm font-medium">
-             <Info size={16} />
-             About
-           </button>
-           <button className="hover:opacity-75 transition-opacity sm:ml-4">
-              <Menu size={24} />
-           </button>
+    <header className="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+      {/* Primary Header */}
+      <div 
+        className={`w-full transition-all duration-300 ${
+          scrolled 
+            ? "bg-arcgis-dark/95 backdrop-blur-md border-b border-gray-800 py-2 shadow-2xl" 
+            : "bg-arcgis-dark py-4"
+        }`}
+      >
+        <div className="max-w-[1800px] mx-auto px-6 flex justify-between items-center">
+          <div className="flex items-center gap-6">
+             <Image 
+               src="/Logo.png" 
+               alt="Logo" 
+               width={600} 
+               height={100} 
+               className={`w-auto transition-all duration-300 ${scrolled ? 'h-10' : 'h-16'}`} 
+             />
+             <div className="h-10 border-l border-gray-700 hidden md:block"></div>
+             <span className="font-heading font-black text-2xl tracking-tighter text-white hidden md:block italic">
+               
+             </span>
+          </div>
+          
+          <div className="flex items-center gap-4">
+             <h1 className="text-white font-heading font-bold text-xl md:text-3xl tracking-tight opacity-90">
+               TCAMPO Area
+             </h1>
+          </div>
+
+          <div className="flex flex-row items-center gap-4">
+             <button className="text-gray-400 hover:text-white transition-colors p-2 rounded-full hover:bg-gray-800">
+                <Menu size={24} />
+             </button>
+          </div>
         </div>
       </div>
 
-      {/* Secondary Nav Bar */}
+      {/* Secondary Nav Bar - Styled like the screenshot tabs */}
       <div 
-        className={`w-full bg-[#f8f9fa] border-t border-gray-200 transition-all duration-300 overflow-hidden flex justify-center shadow-md ${
-          pastHero ? "h-[60px] opacity-100" : "h-0 opacity-0 border-transparent"
+        className={`w-full bg-[#111827]/90 backdrop-blur-sm border-b border-gray-800 transition-all duration-500 overflow-hidden ${
+          pastHero ? "h-[80px] opacity-100 translate-y-0" : "h-0 opacity-0 -translate-y-4"
         }`}
       >
-        <nav className="flex items-center gap-8 px-6 overflow-x-auto h-full max-w-7xl w-full justify-center">
+        <nav className="flex items-center gap-3 px-6 h-full max-w-7xl mx-auto justify-center">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.id}
-              href={`#${link.id}`}
               onClick={(e) => scrollToSection(link.id, e)}
-              className={`h-full flex items-center text-[17px] font-body transition-colors whitespace-nowrap px-1 border-b-[3px] ${
+              className={`px-6 py-2.5 rounded-lg text-sm font-heading font-bold transition-all duration-300 transform ${
                 activeSection === link.id
-                  ? "border-arcgis-teal text-arcgis-teal font-medium"
-                  : "border-transparent text-gray-500 hover:text-gray-900 hover:border-gray-300"
+                  ? "bg-accent-yellow text-arcgis-dark shadow-[0_0_15px_rgba(250,204,21,.4)] scale-105"
+                  : "bg-gray-800/50 text-gray-400 border border-gray-700 hover:bg-gray-700 hover:text-white"
               }`}
             >
               {link.label}
-            </a>
+            </button>
           ))}
         </nav>
       </div>

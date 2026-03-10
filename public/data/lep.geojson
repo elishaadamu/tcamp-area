@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { "type": "Feature", "properties": { "name": "LEP Point 1", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.27, 41.69] } },
+    { "type": "Feature", "properties": { "name": "Language Center SB", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.24, 41.68] } },
+    { "type": "Feature", "properties": { "name": "Cultural Exchange Hub", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.255, 41.70] } },
+    { "type": "Feature", "properties": { "name": "International Library Branch", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.22, 41.66] } }
+  ]
+}

@@ -4,21 +4,6 @@ import Image from 'next/image';
 import { ArrowDown } from 'lucide-react';
 
 export default function Hero() {
-  const scrollToProcess = () => {
-    const el = document.getElementById("process");
-    if (el) {
-      const offset = 100;
-      const bodyRect = document.body.getBoundingClientRect().top;
-      const elementRect = el.getBoundingClientRect().top;
-      const elementPosition = elementRect - bodyRect;
-      const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth"
-      });
-    }
-  };
 
   return (
     <div className="relative h-screen w-full flex items-center justify-center overflow-hidden">
@@ -50,9 +35,22 @@ export default function Hero() {
 
       {/* Down Arrow */}
       <button 
-        onClick={scrollToProcess}
+        onClick={() => {
+          const el = document.getElementById("methodology");
+          if (el) {
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = el.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            const offsetPosition = elementPosition - offset;
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: "smooth"
+            });
+          }
+        }}
         className="absolute bottom-10 border border-white rounded-full p-4 left-1/2 -translate-x-1/2 z-20 animate-pulse hover:opacity-75 transition-opacity cursor-pointer flex items-center justify-center"
-        aria-label="Scroll down to process"
+        aria-label="Scroll down to methodology"
       >
         <ArrowDown size={40} className="text-white drop-shadow-md opacity-90" />
       </button>

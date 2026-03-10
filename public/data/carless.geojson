@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    { 
+      "type": "Feature", 
+      "properties": { "name": "Bus Route A", "level": "medium" }, 
+      "geometry": { 
+        "type": "LineString", 
+        "coordinates": [
+          [-86.28, 41.65], [-86.28, 41.70], [-86.22, 41.70]
+        ] 
+      } 
+    },
+    { "type": "Feature", "properties": { "name": "South Bend Transpo Hub", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.25, 41.674] } },
+    { "type": "Feature", "properties": { "name": "Bike SB Shop", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.24, 41.678] } },
+    { "type": "Feature", "properties": { "name": "Mishawaka Transit Station", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.175, 41.666] } },
+    { "type": "Feature", "properties": { "name": "Intermodal Transfer Center", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.265, 41.672] } }
+  ]
+}

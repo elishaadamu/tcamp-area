@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Elderly Zone", "level": "low" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-86.15, 41.73], [-86.08, 41.73], [-86.08, 41.77], [-86.15, 41.77], [-86.15, 41.73]
+        ]]
+      }
+    },
+    { "type": "Feature", "properties": { "name": "Heritage Senior Center", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.23, 41.675] } },
+    { "type": "Feature", "properties": { "name": "River Park Senior Living", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.21, 41.67] } },
+    { "type": "Feature", "properties": { "name": "Michiana Medical Plaza", "level": "high" }, "geometry": { "type": "Point", "coordinates": [-86.245, 41.72] } },
+    { "type": "Feature", "properties": { "name": "South Bend Rehabilitation Center", "level": "medium" }, "geometry": { "type": "Point", "coordinates": [-86.27, 41.64] } }
+  ]
+}

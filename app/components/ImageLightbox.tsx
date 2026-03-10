@@ -14,7 +14,7 @@ interface ImageLightboxProps {
   imageClassName?: string;
 }
 
-export default function ImageLightbox({ src, alt, width = 900, height = 600, containerClassName = "", imageClassName = "" }: ImageLightboxProps) {
+export default function ImageLightbox({ src, alt, width = 1400, height = 800, containerClassName = "", imageClassName = "" }: ImageLightboxProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

@@ -4,8 +4,11 @@
   --font-heading: var(--font-montserrat);
   --font-body: var(--font-lora);
   --color-arcgis-teal: #0f4c5c;
-  --color-arcgis-dark: #121212;
-  --color-arcgis-gray: #f2f2f2;
+  --color-arcgis-dark: #0a0e14;
+  --color-arcgis-gray: #1a1f26;
+  --color-accent-yellow: #facc15;
+  --color-nav-bg: #0d1117;
+  --color-card-bg: #161b22;
 }
 
 @layer utilities {
@@ -21,4 +24,11 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--color-arcgis-dark);
+  color: #f3f4f6;
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
 }
